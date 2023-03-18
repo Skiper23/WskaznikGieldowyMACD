@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
 def alfa(n,wykladnik):
     pom=2/(n+1)
     return pow(1-pom,wykladnik)
@@ -84,7 +85,6 @@ ema26=ema(26,wartosci)
 macd=[]
 for i,j in zip(ema12,ema26):
     macd.append(i-j)
-print(macd)
 
 signal=ema(9,macd)
 
